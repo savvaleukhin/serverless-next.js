@@ -319,6 +319,7 @@ class NextjsComponent extends Component {
       paths: cloudFrontPaths,
       waitBeforeInvalidate: cloudFrontWaitBeforeInvalidate = true,
       tags: cloudFrontTags,
+      resetCacheBehaviors: cloudFrontResetCacheBehaviors = false,
       ...cloudFrontOtherInputs
     } = inputs.cloudfront || {};
 
@@ -913,6 +914,7 @@ class NextjsComponent extends Component {
     const cloudFrontOutputs = await cloudFront({
       bucketRegion: bucketRegion,
       distributionId: cloudFrontDistributionId,
+      resetCacheBehaviors: cloudFrontResetCacheBehaviors,
       defaults: {
         minTTL: 0,
         defaultTTL: 0,

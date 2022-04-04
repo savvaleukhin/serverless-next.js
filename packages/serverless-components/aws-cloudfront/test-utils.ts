@@ -34,6 +34,20 @@ export const assertHasCacheBehavior = (spy, cacheBehavior): void => {
   );
 };
 
+export const assertNotHasCacheBehavior = (spy, cacheBehavior): void => {
+  expect(spy).toBeCalledWith(
+    expect.not.objectContaining({
+      DistributionConfig: expect.objectContaining({
+        CacheBehaviors: expect.objectContaining({
+          Items: expect.arrayContaining([
+            expect.objectContaining(cacheBehavior)
+          ])
+        })
+      })
+    })
+  );
+};
+
 export const assertCDWTHasCacheBehavior = (spy, cacheBehavior): void => {
   expect(spy).toBeCalledWith(
     expect.objectContaining({

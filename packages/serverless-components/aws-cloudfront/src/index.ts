@@ -30,6 +30,8 @@ const updateBucketsPolicies = async (
   );
 };
 
+const getEmptyCacheBehaviors = () => ({ Items: [], Quantity: 0 });
+
 const createCloudFrontDistribution = async (
   cf: AWS.CloudFront,
   s3: AWS.S3,
@@ -300,9 +302,13 @@ const updateCloudFrontDistribution = async (
     }
   });
 
+  if (inputs.resetCacheBehaviors) {
+    params.DistributionConfig.CacheBehaviors = getEmptyCacheBehaviors();
+  }
+
   if (CacheBehaviors) {
-    const behaviors = (params.DistributionConfig.CacheBehaviors = params
-      .DistributionConfig.CacheBehaviors || { Items: [] });
+    const behaviors = (params.DistributionConfig.CacheBehaviors =
+      params.DistributionConfig.CacheBehaviors || getEmptyCacheBehaviors());
     const behaviorPaths = behaviors.Items.map((b) => b.PathPattern);
     CacheBehaviors.Items.forEach((inputBehavior) => {
       const behaviorIndex = behaviorPaths.indexOf(inputBehavior.PathPattern);
