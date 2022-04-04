@@ -48,7 +48,7 @@ The above always test the latest minor version of Next.js. These are also duplic
 Each test app tests various combinations of configuration. The test app may also be useful for you to manually verify your changes. When making a PR, it is recommended to at least run the end-to-end tests for the basic app, i.e `next-app`. However, if you have difficulty setting up the end-to-end tests, no worries! We will also run them for you as part of the PR. For forks, this is run manually by a maintainer.
 
 1. Ensure you have built all your changes by running `yarn` in the root directory of `serverless-next.js` repository.
-2. Change directory to the test app, e.g the basic one is [next-app](https://github.com/serverless-nextjs/serverless-next.js/tree/master/packages/e2e-tests/next-app).
+2. Change directory to the test app, e.g the basic one is [next-app](https://github.com/sleukhin/serverless-next.js/tree/master/packages/e2e-tests/next-app).
 3. Run `yarn install` to ensure dependencies such as Cypress are installed.
 4. Run `AWS_ACCESS_KEY_ID=xxx AWS_SECRET_ACCESS_KEY=xxx serverless` (or `npx serverless`) to deploy your changes to your AWS account.
 5. Save the output CloudFront distribution URL somewhere.
@@ -99,7 +99,7 @@ import S3 from "aws-sdk/clients/s3";
 
 could incur **100 ms** or more cold start times on every handler invocation, even when it's not actually used. Also, although the `aws-sdk` (AWS SDK JS v2) is built into AWS Lambda's Node.js runtime, it is not modularized and will `require` a bunch of unused code. Even if importing just the S3 client, it also takes close to 100 ms because it imports code for all S3 operations, even if you use only one. In traditional server-based environments, we do not have to worry about this as it is a one-time cost, but since Lambda is a serverless environment, containers will get re-initialized and this becomes a performance problem.
 
-See issue here for more information: https://github.com/serverless-nextjs/serverless-next.js/issues/580
+See issue here for more information: https://github.com/sleukhin/serverless-next.js/issues/580
 
 Instead, consider dynamically importing only when needed. For example, we use the AWS SDK JS v3 client which for S3:
 
