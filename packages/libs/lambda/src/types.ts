@@ -1,5 +1,5 @@
-import { ApiManifest, PageManifest } from "@sls-next/core";
-export { ImageConfig, ImagesManifest, RoutesManifest } from "@sls-next/core";
+import { ApiManifest, PageManifest } from "@savaleukhin/core";
+export { ImageConfig, ImagesManifest, RoutesManifest } from "@savaleukhin/core";
 
 export type LambdaManifest = {
   bucketName: string;

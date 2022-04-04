@@ -1,5 +1,5 @@
 {
-  "name": "@sls-next/next-aws-lambda",
+  "name": "@savaleukhin/next-aws-lambda",
   "publishConfig": {
     "access": "public"
   },

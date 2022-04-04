@@ -1,4 +1,4 @@
-# @sls-next/core
+# @savaleukhin/core
 > Core library for running serverless Next.js apps
 
 This decouples the core Next.js handler logic from a particular platform.
@@ -8,7 +8,7 @@ It provides platform-agnostic handlers that can be extended for use on specific 
 Code coverage relies on jest configuration:
 
     "moduleNameMapper": {
-      "@sls-next/core": "<rootDir>/packages/libs/core/src/index.ts"
+      "@savaleukhin/core": "<rootDir>/packages/libs/core/src/index.ts"
     },
 
 Builds twice, both a commonjs module (dist/index.js) and an ES module (dist/module/index.js).

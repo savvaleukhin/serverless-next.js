@@ -1,5 +1,5 @@
 {
-  "name": "@sls-next/lambda-at-edge",
+  "name": "@savaleukhin/lambda-at-edge",
   "publishConfig": {
     "access": "public"
   },
@@ -47,7 +47,7 @@
     "@rollup/plugin-commonjs": "18.1.0",
     "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "10.0.0",
-    "@sls-next/next-aws-cloudfront": "link:../../compat-layers/lambda-at-edge-compat",
+    "@savaleukhin/next-aws-cloudfront": "link:../../compat-layers/lambda-at-edge-compat",
     "@types/aws-lambda": "8.10.92",
     "@types/fs-extra": "9.0.13",
     "@types/jest": "27.4.0",
@@ -83,8 +83,8 @@
   "dependencies": {
     "@aws-sdk/client-s3": "3.54.0",
     "@aws-sdk/client-sqs": "3.54.0",
-    "@sls-next/aws-common": "link:../aws-common",
-    "@sls-next/core": "link:../core",
+    "@savaleukhin/aws-common": "link:../aws-common",
+    "@savaleukhin/core": "link:../core",
     "@vercel/nft": "0.17.5",
     "execa": "5.1.1",
     "fs-extra": "9.1.0",

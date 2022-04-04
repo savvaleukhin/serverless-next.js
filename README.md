@@ -5,8 +5,8 @@
 [![serverless](http://public.serverless.com/badges/v3.svg)](https://www.serverless.com)
 [![GitHub contributors](https://img.shields.io/github/contributors/serverless-nextjs/serverless-next.js)](https://github.com/sleukhin/serverless-next.js/graphs/contributors)
 [![Financial Contributors on Open Collective](https://opencollective.com/serverless-nextjs-plugin/all/badge.svg?label=backers)](https://opencollective.com/serverless-nextjs-plugin)
-[![npm latest](https://img.shields.io/npm/v/@sls-next/serverless-component)](https://www.npmjs.com/package/@sls-next/serverless-component?activeTab=versions)
-[![npm alpha](https://img.shields.io/npm/v/@sls-next/serverless-component/alpha)](https://www.npmjs.com/package/@sls-next/serverless-component?activeTab=versions)
+[![npm latest](https://img.shields.io/npm/v/@savaleukhin/serverless-component)](https://www.npmjs.com/package/@savaleukhin/serverless-component?activeTab=versions)
+[![npm alpha](https://img.shields.io/npm/v/@savaleukhin/serverless-component/alpha)](https://www.npmjs.com/package/@savaleukhin/serverless-component?activeTab=versions)
 ![Build Status](https://github.com/sleukhin/serverless-next.js/workflows/CI/badge.svg)
 ![End-to-end Tests](https://github.com/sleukhin/serverless-next.js/workflows/End-to-end%20Tests/badge.svg)
 ![CircleCI Build Status](https://img.shields.io/circleci/build/github/serverless-nextjs/serverless-next.js)
@@ -38,7 +38,7 @@ Please review [features](https://github.com/sleukhin/serverless-next.js#features
 - [CDK Construct](#cdk-construct)
 - [FAQ](#faq)
 
-> :warning: This README reflects the latest changes on the `master` branch. It may or may not yet be published to the `latest` (stable) or `alpha` release in npm. Please go to [Releases](https://github.com/sleukhin/serverless-next.js/releases), find the correct `@sls-next/serverless-component` version you are using, and open the README for that release for more accurate information. If a feature is listed in this README but not working, please first try upgrading to the most recent `alpha` release in npm.
+> :warning: This README reflects the latest changes on the `master` branch. It may or may not yet be published to the `latest` (stable) or `alpha` release in npm. Please go to [Releases](https://github.com/sleukhin/serverless-next.js/releases), find the correct `@savaleukhin/serverless-component` version you are using, and open the README for that release for more accurate information. If a feature is listed in this README but not working, please first try upgrading to the most recent `alpha` release in npm.
 
 > ⚠ this is currently using Serverless Components Beta (not GA version) as the project was started before GA. We are currently reworking how deployments will work in the future and exploring better IaC solutions such as CDK, CDK for Terraform, etc. and will make an announcement before end of the year on any updates.
 
@@ -66,7 +66,7 @@ With a simplified architecture and no use of CloudFormation, there are no limits
 
 Since we emulate the Next.js routing logic, unfortunately we aren't always at full parity. The following shows all supported features or planned features. If the checkbox is ticked, it means that the feature is supported. Otherwise, it is likely not supported yet or currently in planning or implementation stage. Please refer to an item's description for specific details.
 
-Note that some features may only be on the latest [alpha version](https://www.npmjs.com/package/@sls-next/serverless-component?activeTab=versions). If a feature is listed as supported but not working on the `latest` tag, it most likely is in the `alpha` tag. If you can, please help us test the latest alpha changes and [submit a bug report](https://github.com/sleukhin/serverless-next.js/issues/new?assignees=&labels=&template=bug_report.md&title=) if you find any issues. Thank you!
+Note that some features may only be on the latest [alpha version](https://www.npmjs.com/package/@savaleukhin/serverless-component?activeTab=versions). If a feature is listed as supported but not working on the `latest` tag, it most likely is in the `alpha` tag. If you can, please help us test the latest alpha changes and [submit a bug report](https://github.com/sleukhin/serverless-next.js/issues/new?assignees=&labels=&template=bug_report.md&title=) if you find any issues. Thank you!
 
 Is there a feature that you want but is not yet supported? Please open a [new issue](https://github.com/sleukhin/serverless-next.js/issues/new?assignees=&labels=&template=feature_request.md&title=) to let us know!
 
@@ -104,10 +104,10 @@ First, ensure you have Node.js 12+ installed on the deploying machine as all cod
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}" # it is recommended you pin the latest stable version of serverless-next.js
+  component: "@savaleukhin/serverless-component@{version_here}" # it is recommended you pin the latest stable version of serverless-next.js
 ```
 
-:no_entry_sign: **If you specify `@sls-next/serverless-component` in your `serverless.yml` file, do not add `@sls-next/serverless-component` to your package.json file, it is not used and only the version in `serverless.yml` file is used, which Serverless pulls from npm by itself. If you do not specify the version, it will use the `latest` tag, which refers to the latest stable version [here](https://www.npmjs.com/package/@sls-next/serverless-component) (i.e not alpha versions).**
+:no_entry_sign: **If you specify `@savaleukhin/serverless-component` in your `serverless.yml` file, do not add `@savaleukhin/serverless-component` to your package.json file, it is not used and only the version in `serverless.yml` file is used, which Serverless pulls from npm by itself. If you do not specify the version, it will use the `latest` tag, which refers to the latest stable version [here](https://www.npmjs.com/package/@savaleukhin/serverless-component) (i.e not alpha versions).**
 
 You can also point it to a local installation, for example if you want to version using `package.json`.
 
@@ -117,7 +117,7 @@ In this case, configure the following:
 # serverless.yml
 
 myNextApplication:
-  component: "./node_modules/@sls-next/serverless-component"
+  component: "./node_modules/@savaleukhin/serverless-component"
 ```
 
 Then set your AWS credentials as environment variables:
@@ -136,7 +136,7 @@ $ serverless
 If you have issues deploying due to new serverless version, please try to pin to specific version e.g
 2.72.2. See https://github.com/sleukhin/serverless-next.js/issues/2320#issue-1116744699
 
-[ALPHA - may be buggy] You may also deploy using `npx @sls-next/serverless-patched` (or `serverless-patched` if you installed it locally), which is a patched version of `serverless` that fixes a couple of issues by patching the underlying `@serverless/cli`: (1) Continuous "Deploying" messages being printed in non-interactive terminals (e.g CI output) that make it hard to debug, and (2) Handles silent Next.js build failures.
+[ALPHA - may be buggy] You may also deploy using `npx @savaleukhin/serverless-patched` (or `serverless-patched` if you installed it locally), which is a patched version of `serverless` that fixes a couple of issues by patching the underlying `@serverless/cli`: (1) Continuous "Deploying" messages being printed in non-interactive terminals (e.g CI output) that make it hard to debug, and (2) Handles silent Next.js build failures.
 
 It's also recommended to add `--debug` flag to get more useful logs of what's happening behind the scenes.
 
@@ -158,7 +158,7 @@ The serverless Next.js component will automatically generate an SSL certificate 
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     domain: "example.com" # sub-domain defaults to www
     domainMinimumProtocolVersion: "TLSv1.2_2018" # can be omitted, defaults to "TLSv1.2_2018"
@@ -170,7 +170,7 @@ You can also configure a `subdomain`:
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     domain: ["sub", "example.com"] # [ sub-domain, domain ]
 ```
@@ -183,7 +183,7 @@ To specify your own CloudFront inputs, just add any [aws-cloudfront inputs](http
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     cloudfront:
       # if you want to use an existing cloudfront distribution, provide it here
@@ -287,7 +287,7 @@ You may customize either the `Cache-Control` header `value` and the regex of whi
 
 ```yaml
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     publicDirectoryCache:
       value: public, max-age=604800
@@ -299,7 +299,7 @@ If you don't want browsers to cache assets from the public directory, you can di
 
 ```yaml
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     publicDirectoryCache: false
 ```
@@ -314,7 +314,7 @@ By default the Lambda@Edge functions run using AWSLambdaBasicExecutionRole which
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     policy: "arn:aws:iam::123456789012:policy/MyCustomPolicy"
 ```
@@ -325,7 +325,7 @@ myNextApplication:
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     roleArn: "arn:aws:iam::123456789012:role/MyCustomLambdaRole"
 ```
@@ -431,7 +431,7 @@ The **default**, **api**, and **image** (for Next.js Image Optimization) edge la
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     memory: 1024
 ```
@@ -442,7 +442,7 @@ Values for **default**, **api**, and **image** lambdas can be separately defined
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     memory:
       defaultLambda: 1024
@@ -456,7 +456,7 @@ The same pattern can be followed for specifying the Node.js runtime (nodejs14.x 
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     runtime:
       defaultLambda: "nodejs14.x"
@@ -470,7 +470,7 @@ Similarly, the timeout by default is 10 seconds. To customise you can:
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     timeout:
       defaultLambda: 20
@@ -486,7 +486,7 @@ You can also set a custom name for **default**, **api**, and **image** lambdas -
 # serverless.yml
 
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     name:
       defaultLambda: fooDefaultLambda
@@ -564,7 +564,7 @@ Custom inputs can be configured like this:
 
 ```yaml
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     bucketName: my-bucket
 ```
@@ -596,7 +596,7 @@ Make sure your `serverless.yml` uses the `serverless-components` (beta) format. 
 ```yml
 # serverless.yml
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
 
 myTable:
   component: serverless/aws-dynamodb
@@ -615,7 +615,7 @@ provider:
   region: eu-west-1
 
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
 
 Resources: ...
 ```
@@ -684,7 +684,7 @@ By default, CloudFront sets the `Host` header to the S3 origin host name. You ne
 
 ```yml
 myNextApplication:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     cloudfront:
       api/*:
@@ -723,7 +723,7 @@ We are currently looking into proper IaC solutions (such as CDK for Terraform, C
 
 #### Are there plans to expand to other platforms?
 
-Yes! The main blocker was that the Next.js routing logic used to be highly coupled with Lambda@Edge/CloudFront logic. However, we have genericized most of the core logic (into the `@sls-next/core` package) so that it can be reused in other platforms, simply by creating a wrapping handler, implementing some platform-specific client (e.g to retrieve pages, trigger static regeneration, etc.), and creating a deployer. If you were observant, you'll have noticed a new package currently in the works for Lambda deployments via API Gateway: https://github.com/sleukhin/serverless-next.js/tree/master/packages/libs/lambda. Other platforms like Azure and Google Cloud should hopefully follow soon.
+Yes! The main blocker was that the Next.js routing logic used to be highly coupled with Lambda@Edge/CloudFront logic. However, we have genericized most of the core logic (into the `@savaleukhin/core` package) so that it can be reused in other platforms, simply by creating a wrapping handler, implementing some platform-specific client (e.g to retrieve pages, trigger static regeneration, etc.), and creating a deployer. If you were observant, you'll have noticed a new package currently in the works for Lambda deployments via API Gateway: https://github.com/sleukhin/serverless-next.js/tree/master/packages/libs/lambda. Other platforms like Azure and Google Cloud should hopefully follow soon.
 
 #### My lambda is deployed to `us-east-1`. How can I deploy it to another region?
 
@@ -738,7 +738,7 @@ See the sample below for an advanced `build` setup that includes passing additio
 myDatabase:
   component: MY_DATABASE_COMPONENT
 myNextApp:
-  component: "@sls-next/serverless-component@{version_here}"
+  component: "@savaleukhin/serverless-component@{version_here}"
   inputs:
     build:
       args: ["build", "custom/path/to/pages"]
@@ -758,7 +758,7 @@ It seems to be a bug in Serverless Components - it may be due to not using the l
 ```yml
 stage: ${env.STAGE}
 my-app:
-  component: "@sls-next/serverless-component@1.18.0"
+  component: "@savaleukhin/serverless-component@1.18.0"
   inputs:
     domain:
       - "${stage}-front-end"

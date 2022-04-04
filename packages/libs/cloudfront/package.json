@@ -1,5 +1,5 @@
 {
-  "name": "@sls-next/cloudfront",
+  "name": "@savaleukhin/cloudfront",
   "version": "3.7.0",
   "description": "Handles CloudFront invalidation",
   "publishConfig": {

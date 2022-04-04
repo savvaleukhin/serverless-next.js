@@ -1,13 +1,13 @@
-# @sls-next/lambda-at-edge
+# @savaleukhin/lambda-at-edge
 > Library to build and deploy Next.js apps for AWS Lambda@Edge
 
-This library uses the handlers provided by `@sls-next/core` and wraps them with a Lambda@Edge/CloudFront-compatible layer.
+This library uses the handlers provided by `@savaleukhin/core` and wraps them with a Lambda@Edge/CloudFront-compatible layer.
 
 ## Usage
 
 ```ts
 const path = require('path');
-const { Builder } = require("@sls-next/lambda-at-edge");
+const { Builder } = require("@savaleukhin/lambda-at-edge");
 
 const nextConfigPath = '/path/to/my/nextapp';
 const outputDir = path.join(nextConfigPath, ".serverless_nextjs");
@@ -92,7 +92,7 @@ You will need the following infrastructure to deploy your app:
 
 ## Deployment
 
-Currently, you will need to deploy via the Serverless Components deployer, `@sls-next/serverless-component`. We also provide a CDK construct at `@sls-next/nextjs-cdk-construct`.
+Currently, you will need to deploy via the Serverless Components deployer, `@savaleukhin/serverless-component`. We also provide a CDK construct at `@savaleukhin/nextjs-cdk-construct`.
 
 If you'd like to write your own custom deployment logic, please see the CDK construct or legacy Serverless Components deployer to see an example of all the infrastructure you need to setup.
 

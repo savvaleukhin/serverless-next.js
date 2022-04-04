@@ -13,8 +13,8 @@ import {
   OriginRequestApiHandlerManifest,
   OriginRequestDefaultHandlerManifest,
   RoutesManifest
-} from "@sls-next/lambda-at-edge";
-import { PreRenderedManifest } from "@sls-next/core";
+} from "@savaleukhin/lambda-at-edge";
+import { PreRenderedManifest } from "@savaleukhin/core";
 import * as fs from "fs-extra";
 import * as path from "path";
 import {

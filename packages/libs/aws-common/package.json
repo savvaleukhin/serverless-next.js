@@ -1,5 +1,5 @@
 {
-  "name": "@sls-next/aws-common",
+  "name": "@savaleukhin/aws-common",
   "version": "3.7.0",
   "description": "Common AWS code that is used in Lambda, Lambda@Edge and other AWS platforms.",
   "publishConfig": {
@@ -35,7 +35,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "3.54.0",
     "@aws-sdk/client-sqs": "3.54.0",
-    "@sls-next/core": "link:../core"
+    "@savaleukhin/core": "link:../core"
   },
   "devDependencies": {
     "@types/node": "17.0.19",
