@@ -1,6 +1,6 @@
 {
   "name": "@savaleukhin/domain",
-  "version": "3.7.0",
+  "version": "3.7.1-alpha.4",
   "main": "serverless.js",
   "publishConfig": {
     "access": "public"

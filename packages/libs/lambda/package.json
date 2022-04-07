@@ -1,6 +1,6 @@
 {
   "name": "@savaleukhin/lambda",
-  "version": "3.7.0",
+  "version": "3.7.1-alpha.4",
   "description": "Code to build and deploy for Lambda + API Gateway",
   "publishConfig": {
     "access": "public"
