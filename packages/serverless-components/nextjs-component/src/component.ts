@@ -885,6 +885,12 @@ class NextjsComponent extends Component {
         edgeConfig[
           "origin-request"
         ] = `${defaultEdgeLambdaOutputs.arn}:${defaultEdgeLambdaPublishOutputs.version}`;
+
+        if (!buildOptions.disableOriginResponseHandler) {
+          edgeConfig[
+            "origin-response"
+          ] = `${defaultEdgeLambdaOutputs.arn}:${defaultEdgeLambdaPublishOutputs.version}`;
+        }
       }
 
       cloudFrontOrigins[0].pathPatterns[path] = {
