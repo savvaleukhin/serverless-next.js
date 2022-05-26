@@ -10,10 +10,7 @@
     "e2e": "cypress run",
     "e2e:ci": "SSG_PAGE_PATH=/ssg-page SSR_PAGE_PATH=/ssr-page APP_NAME=next-app-with-locales ts-node --project tsconfig.scripts.json ../test-utils/scripts/run-e2e-ci.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-next.js/serverless-next.js"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "keywords": [],
   "author": "Daniel Phang",
   "license": "MIT",

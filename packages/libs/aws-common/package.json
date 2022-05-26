@@ -10,11 +10,7 @@
   "directories": {
     "dist": "dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-nextjs/serverless-next.js.git",
-    "directory": "packages/libs/aws-common"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "scripts": {
     "prepack": "yarn clean && yarn build",
     "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.module.json",

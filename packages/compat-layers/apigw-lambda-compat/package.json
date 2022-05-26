@@ -17,11 +17,7 @@
     "next",
     "api gateway"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-nextjs/serverless-next.js.git",
-    "directory": "packages/compat-layers/apigw-lambda-compat"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "author": "Daniel Conde Marin <danielconde9@gmail.com>",
   "license": "MIT"
 }

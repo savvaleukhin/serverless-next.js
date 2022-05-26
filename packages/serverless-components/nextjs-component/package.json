@@ -7,11 +7,7 @@
   "description": "Serverless Next.js powered by Serverless Components",
   "main": "./serverless.js",
   "types": "dist/component.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-nextjs/serverless-next.js.git",
-    "directory": "packages/serverless-components/nextjs-component"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "scripts": {
     "prepack": "yarn clean && yarn build",
     "build": "tsc -p tsconfig.build.json",

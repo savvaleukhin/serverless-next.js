@@ -7,11 +7,7 @@
   "description": "Compat layer for running next.js apps in Lambda@Edge",
   "main": "next-aws-cloudfront.js",
   "types": "next-aws-cloudfront.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-nextjs/serverless-next.js.git",
-    "directory": "packages/compat-layers/lambda-at-edge-compat"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "keywords": [
     "AWS",
     "Lambda",

@@ -22,11 +22,7 @@
   "bugs": {
     "url": "https://github.com/serverless-nextjs/serverless-next.js/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-nextjs/serverless-next.js.git",
-    "directory": "packages/serverless-components/nextjs-cdk-construct"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "license": "MIT",
   "dependencies": {
     "@sls-next/core": "link:../../libs/core",

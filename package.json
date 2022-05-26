@@ -31,10 +31,7 @@
     "handlers:upload-handler-sizes": "ts-node scripts/upload-handler-sizes.ts",
     "handlers:comment-handler-sizes": "ts-node scripts/comment-handler-sizes.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/serverless-nextjs/serverless-next.js"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "author": "Daniel Conde Marin <danielconde9@gmail.com>",
   "license": "MIT",
   "bugs": {

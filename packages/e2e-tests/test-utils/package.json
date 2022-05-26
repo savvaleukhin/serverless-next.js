@@ -5,10 +5,7 @@
   "scripts": {
     "cleanup-lambda": "ts-node --project tsconfig.scripts.json scripts/cleanup-lambda.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-next.js/serverless-next.js"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "keywords": [],
   "author": "Daniel Phang",
   "license": "MIT",

@@ -18,11 +18,7 @@
   "peerDependencies": {
     "next": "^8.0.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-nextjs/serverless-next.js.git",
-    "directory": "packages/serverless-plugin"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "dependencies": {
     "@mapbox/s3urls": "^2.0.0",
     "@sls-next/next-aws-lambda": "link:../../compat-layers/apigw-lambda-compat",

@@ -8,10 +8,7 @@
     "deploy": "serverless deploy",
     "remove": "serverless remove"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/serverless-nextjs/serverless-next.js"
-  },
+  "repository": "https://github.com/sleukhin/serverless-next.js",
   "keywords": [],
   "author": "Daniel Phang",
   "license": "MIT",
