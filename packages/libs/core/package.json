@@ -1,6 +1,6 @@
 {
   "name": "@sls-next/core",
-  "version": "3.8.1-alpha.0",
+  "version": "3.8.2-alpha.0",
   "description": "Handles Next.js routing independent of provider",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

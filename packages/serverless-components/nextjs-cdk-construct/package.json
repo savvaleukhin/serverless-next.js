@@ -4,7 +4,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "description": "Serverless Next.js powered by AWS CDK",
-  "version": "3.8.1-alpha.0",
+  "version": "3.8.2-alpha.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Henry Kirkness <henry@planes.studio>",
