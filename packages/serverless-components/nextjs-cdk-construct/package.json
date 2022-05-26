@@ -1,7 +1,7 @@
 {
   "name": "@sls-next/cdk-construct",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "description": "Serverless Next.js powered by AWS CDK",
   "version": "3.8.1-alpha.0",

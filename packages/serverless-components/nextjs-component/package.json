@@ -1,7 +1,7 @@
 {
   "name": "@sls-next/serverless-component",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "version": "3.8.1-alpha.0",
   "description": "Serverless Next.js powered by Serverless Components",

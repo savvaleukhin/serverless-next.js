@@ -3,7 +3,7 @@
   "version": "3.8.1-alpha.0",
   "description": "Handles Next.js routing independent of provider",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
